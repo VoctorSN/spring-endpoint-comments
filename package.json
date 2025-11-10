@@ -1,0 +1,43 @@
+{
+    "name": "spring-endpoint-comments",
+    "displayName": "Spring Endpoint Comments",
+    "description": "Añade automáticamente comentarios con la ruta completa encima de @GetMapping/@PostMapping/@RequestMapping.",
+    "version": "0.0.1",
+    "publisher": "tu-nombre",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "activationEvents": [
+        "onCommand:extension.addEndpointComment"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.addEndpointComment",
+                "title": "Añadir comentario de endpoint"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.addEndpointComment",
+                "key": "ctrl+alt+e",
+                "when": "editorTextFocus"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Spring Endpoint Comments",
+            "properties": {
+                "springEndpointComments.baseUrl": {
+                    "type": "string",
+                    "default": "https://localhost:9000",
+                    "description": "URL base para armar la ruta completa del endpoint"
+                }
+            }
+        }
+    },
+    "main": "./extension.js",
+    "scripts": {
+        "test": "echo \"No tests\""
+    }
+}
