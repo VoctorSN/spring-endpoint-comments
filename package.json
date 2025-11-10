@@ -15,11 +15,11 @@
             {
                 "id": "placeholder",
                 "description": "Tipo para los placeholders de path",
-                "superType": "parameter"
+                "superType": "string"
             }
         ],
         "semanticTokenModifiers": [],
-        "semanticTokenScopes": [
+        "semanticTokenScopes": [ 
             {
                 "language": "java",
                 "scopes": {

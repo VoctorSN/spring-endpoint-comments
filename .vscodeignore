@@ -4,3 +4,6 @@ node_modules/
 .vscodeignore
 *.vsix
 package-lock.json
+
+# Excluir carpetas de ejemplo/pruebas
+example-spring-boot/
