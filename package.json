@@ -1,7 +1,7 @@
 {
     "name": "spring-endpoint-comments",
     "displayName": "Spring Endpoint Comments",
-    "description": "Añade automáticamente comentarios con la ruta completa encima de @GetMapping/@PostMapping/@RequestMapping.",
+    "description": "Añade automáticamente comentarios con la ruta completa y placeholders tipados encima de @GetMapping/@PostMapping/@RequestMapping.",
     "version": "0.0.1",
     "publisher": "tu-nombre",
     "engines": {
@@ -11,6 +11,24 @@
         "onCommand:extension.addEndpointComment"
     ],
     "contributes": {
+        "semanticTokenTypes": [
+            {
+                "id": "placeholder",
+                "description": "Tipo para los placeholders de path",
+                "superType": "parameter"
+            }
+        ],
+        "semanticTokenModifiers": [],
+        "semanticTokenScopes": [
+            {
+                "language": "java",
+                "scopes": {
+                    "placeholder": [
+                        "variable.readonly"
+                    ]
+                }
+            }
+        ],
         "commands": [
             {
                 "command": "extension.addEndpointComment",
@@ -39,5 +57,10 @@
     "main": "./extension.js",
     "scripts": {
         "test": "echo \"No tests\""
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/VoctorSN/spring-endpoint-comments"
+    },
+    "license": "MIT"
 }
